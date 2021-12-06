@@ -1,0 +1,60 @@
+======= CData3 =======
+
+class Testclass {
+}
+class Testclass1 {
+	Dummy j;
+}
+class Testclass2 {
+}
+class Testclass3 {
+	Testclass3 c;
+	Int i;
+}
+
+======= CMtd3 =======
+
+Void %Testclass_main (Testclass this, Int a, Bool b, String s, Void v, Testclass t) {
+	return;
+}
+Bool %Testclass1_dummy (Testclass1 this) {
+	Bool i;
+	return i;
+}
+Void %Testclass2_main (Testclass2 this, Int i, Int a, Int b, Int d) {
+	Int t1;
+	Int t2;
+	Label 1:
+	if (True) goto 3;
+	goto 2;
+	Label 3:
+	t1 = t2;
+	goto 1;
+	Label 2:
+}
+Int %Testclass3_dummy (Testclass3 this) {
+	Bool i;
+	Bool j;
+	Int _t4;
+	_t1 = i || j;
+	if (_t1) goto 4;
+	Label 6:
+	if (i) goto 8;
+	goto 7;
+	Label 8:
+	_t2 = !j;
+	i = _t2;
+	goto 6;
+	Label 7:
+	return 1;
+	goto 5;
+	Label 4:
+	return 1;
+	Label 5:
+	_t3 = %Testclass3_getcompute(this);
+	_t4 = _t3.i;
+	return _t4;
+}
+Testclass3 %Testclass3_getcompute (Testclass3 this) {
+	return c;
+}

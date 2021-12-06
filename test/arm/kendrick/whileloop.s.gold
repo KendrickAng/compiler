@@ -1,0 +1,49 @@
+.data
+IntegerFormat:
+.asciz "%i"
+L1:
+.asciz "Done!"
+
+.text
+.global main
+.type main, %function
+
+main:
+stmfd sp!,{fp,lr,v1,v2,v3,v4,v5}
+add fp,sp,#24
+sub sp,fp,#40
+mov a1,#0
+str a1,[fp,#-28]
+
+Label1:
+ldr a1,[fp,#-28]
+mov a2,#5
+cmp a1,a2
+movlt a1,#1
+movge a1,#0
+str a1,[fp,#-32]
+ldr a1,[fp,#-32]
+cmp a1,#1
+beq Label3
+b Label8
+
+Label3:
+mov a2,#1
+ldr a3,[fp,#-28]
+add a1,a2,a3
+str a1,[fp,#-36]
+ldr a1,[fp,#-36]
+str a1,[fp,#-28]
+ldr a1,=IntegerFormat
+ldr a2,[fp,#-28]
+bl printf(PLT)
+b Label1
+
+Label8:
+ldr a1,=L1
+bl printf(PLT)
+b mainexit
+
+mainexit:
+sub sp,fp,#24
+ldmfd sp!,{fp,pc,v1,v2,v3,v4,v5}

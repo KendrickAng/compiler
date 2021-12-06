@@ -1,0 +1,36 @@
+======= CData3 =======
+
+class Testatom {
+}
+class Actual {
+	Int a;
+}
+
+======= CMtd3 =======
+
+Void %Testatom_main (Testatom this) {
+	return;
+}
+String %Actual_tostring (Actual this, Int a, Bool b, String c) {
+	return c;
+}
+Void %Actual_actual (Actual this) {
+	Actual t;
+	this.a = 1
+	_t1 = %Actual_tostring(this, 1, True, NULL);
+	_t2 = %Actual_actual();
+	t.a = 1
+	_t3 = %Actual_tostring(t, 1, True, "c");
+	_t4 = new Actual();
+	_t4.a = 1
+	_t6 = new Actual();
+	_t5 = %Actual_tostring(_t6, 1, True, "c");
+	_t7 = new Actual();
+	_t7.a = 1
+	_t9 = new Actual();
+	_t8 = %Actual_tostring(_t9, 1, True, "c");
+	this.a = 1
+	_t10 = %Actual_tostring(this, 1, True, "c");
+	_t11 = %Actual_tostring(t, 1, True, "c");
+	return;
+}

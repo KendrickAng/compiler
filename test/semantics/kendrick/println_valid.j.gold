@@ -1,0 +1,28 @@
+======= CData3 =======
+
+class Main {
+}
+class Print {
+}
+
+======= CMtd3 =======
+
+Void %Main_main (Main this) {
+	Print print;
+	Int i;
+	_t1 = new Print();
+	print = _t1;
+	i = 10;
+	println i;
+	println "2";
+	_t2 = %Main_tostring(print);
+	println _t2;
+	_t3 = "1" + "2";
+	println _t3;
+	_t4 = False && True;
+	_t5 = True || _t4;
+	println _t5;
+}
+String %Print_tostring (Print this) {
+	return "string";
+}

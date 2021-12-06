@@ -1,0 +1,35 @@
+.data
+IntegerFormat:
+.asciz "%i"
+L1:
+.asciz "I do not like this module, it is very hard!"
+L2:
+.asciz "\n"
+L3:
+.asciz "But what choice do we have? It's a compilers module. Suck it up!"
+
+.text
+.global main
+.type main, %function
+
+main:
+stmfd sp!,{fp,lr,v1,v2,v3,v4,v5}
+add fp,sp,#24
+sub sp,fp,#40
+ldr a1,=L1
+str a1,[fp,#-28]
+ldr a1,=L2
+str a1,[fp,#-32]
+ldr a1,=L3
+str a1,[fp,#-36]
+ldr a1,[fp,#-28]
+bl printf(PLT)
+ldr a1,[fp,#-32]
+bl printf(PLT)
+ldr a1,[fp,#-36]
+bl printf(PLT)
+b mainexit
+
+mainexit:
+sub sp,fp,#24
+ldmfd sp!,{fp,pc,v1,v2,v3,v4,v5}

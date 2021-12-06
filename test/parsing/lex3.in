@@ -1,0 +1,15 @@
+class Main {
+   Void main(Int i2, String s2){
+        // bexp
+        a = x > 0 && a;
+        b = true && false || this;
+
+        // aexp
+        c = -a + b * -c;
+        d = this.id + this.id;
+
+        // sexp
+        s = "hello ab \b\b" + null + this + a + a.id + new Hello() + (this);
+    }
+}
+

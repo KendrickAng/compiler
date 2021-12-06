@@ -1,0 +1,351 @@
+/*  Mainly test multiple class (defined later but referenced first),
+    Variable shadowing in Dummy class,
+    chained field access expressions,
+    e.g. this.getCompute().square(-3);
+    Test combination of "if .. else .." "return" and "while"
+*/
+class Main {
+    Void main(Int i, Int a, Int b,Int d){
+        Int t1;
+        Int t2;
+        Compute help;
+        /*
+        help = new Compute();
+        help.chachedValue = t1 * 3;
+        5
+        t1 = help.addSquares(a,b) + help.square(i);
+        t2 = help.square(d);
+        if(t2>t1){
+            println("Square of d larger than sum of squares");
+        }
+        else{
+            println("Square of d larger than sum of squares");
+        }
+        */
+
+        while(true){
+            // t1 = 1*2;
+            t1 = t2 ;
+        }
+    }
+}
+
+class Dummy {
+    Compute c;
+    Int i;
+    Dummy j;
+    Int dummy() {
+        Bool i;
+        Bool j;
+        if (i || j) {
+            return 1;
+        }
+        else {
+            while(i) {
+                i = !j;
+            }
+            c = this.getCompute();
+        }
+        return this.getCompute().square(-3);
+        return i ;
+    }
+    Compute getCompute() {
+        // c = new Compute();
+        return c;
+    }
+}
+
+class Atom {
+
+    Void main(Int a){
+        Object obj;
+
+        this();
+        this.val = 2;
+        this.toString();
+        this.toAdd(1,1,1);
+
+        obj();
+        obj.val = 2;
+        obj.toString();
+        obj.toAdd(1,1,1);
+
+        new Object()();
+        new Object().val = 2;
+        new Object().toString();
+        new Object().toAdd(1,1,1);
+
+        null();
+        null.val = 2;
+        null.toString();
+        null.toAdd(1,1,1);
+
+        (obj.toString())();
+        (obj.toString()).val = 2;
+        (obj.toString()).toString();
+        (obj.toString()).toAdd(1,1,1);
+
+        (obj.toAdd)(1, 1, 1);
+        (obj.toString)();
+
+        (obj.val.toAdd)(1, 1, 1);
+        (obj.val.toString)();
+        (obj.val.toString)().val = new Object();
+
+        return;
+   }
+}
+
+class My_Main_0123 {
+
+   Void main(Int i2, String s2){
+      Dummy d;
+      d = new Dummy();
+      d.aa = new Apple();
+      d.bb = new Banana();
+      d.cc = new Color();
+      d.dd = new Dummy();
+
+      d.aa.seeds = 0;
+      d.aa.color = d.cc;
+      d.dd = d.init(d.aa, d.bb, d.cc, d.dd, d.aa.seeds, d.aa.isRipe && d.aa.isRipe);
+      return;
+   }
+
+}
+
+class Apple {
+   Int seeds;
+   Color color;
+   Bool isRipe;
+}
+
+class Banana {
+   // Empty body
+}
+
+class Color {
+   String red() {
+      return "red";
+   }
+   Bool canMix(Bool y, Int z) {
+      return !false;
+   }
+}
+
+
+class Dummy {
+   Apple aa;
+   Banana bb;
+   Color cc;
+   Dummy dd;
+
+   Dummy init(Apple a, Banana b, Color c, Dummy d, Int e, Bool f) {
+      Dummy gg;
+      if (e + d.aa.seeds + a.seeds > e + e - 02 * e + e - e / e) {
+         gg = null;
+         return this.dd;
+      } else {
+         gg = new Dummy();
+         gg.aa=a;
+         gg.bb=b;
+         gg.cc=c;
+         gg.dd=this;
+         gg.aa.seeds=e+2;
+         gg.aa.isRipe=f;
+         gg.aa.color=gg.cc;
+      }
+      return gg;
+   }
+   Bool dummy() {
+      readln ( s );
+      println(1+2);
+      this.cc = null;
+      return this.aa.color.canMix(this.aa.color.canMix(!true, -1), this.aa.color.canMix(false, 1));
+   }
+}
+
+// Classes
+class My_Main_0123 {
+
+   Void main(Int i2, String s2){
+      Dummy d;
+      d = new Dummy();
+      d.aa = new Apple();
+      d.bb = new Banana();
+      d.cc = new Color();
+      d.dd = new Dummy();
+
+      d.aa.seeds = 0;
+      d.aa.color = d.cc;
+      d.dd = d.init(d.aa, d.bb, d.cc, d.dd, d.aa.seeds, d.aa.isRipe && d.aa.isRipe);
+      return;
+   }
+
+}
+
+class Apple {
+   Int seeds;
+   Color color;
+   Bool isRipe;
+}
+
+class Banana {
+   // Empty body
+}
+
+class Color {
+   String red() {
+      return "red";
+   }
+   Bool canMix(Bool y, Int z) {
+      return !false;
+   }
+}
+
+
+class Dummy {
+   Apple aa;
+   Banana bb;
+   Color cc;
+   Dummy dd;
+
+   Dummy init(Apple a, Banana b, Color c, Dummy d, Int e, Bool f) {
+      Dummy gg;
+      if (e + d.aa.seeds + a.seeds > e + e - 02 * e + e - e / e) {
+         gg = null;
+         return this.dd;
+      } else {
+         gg = new Dummy();
+         gg.aa=a;
+         gg.bb=b;
+         gg.cc=c;
+         gg.dd=this;
+         gg.aa.seeds=e+2;
+         gg.aa.isRipe=f;
+         gg.aa.color=gg.cc;
+      }
+      return gg;
+   }
+   Bool dummy() {
+      readln ( s );
+      println(1+2);
+      this.cc = null;
+      return this.aa.color.canMix(this.aa.color.canMix(!true, -1), this.aa.color.canMix(false, 1));
+   }
+}
+
+// EXP
+class Main {
+
+    Void main(){
+        String s;
+        Clone h;
+        h = new Clone();
+        h.val = 1;
+        h.parent = null;
+        g = h;
+        f = g.copy().diff(h.copy());
+        println(3 > -2 / ------1 && false || true || h.copy().copy().copy().parent.copy().val == -1 && !true && !!false || !f.getTrue(!false));
+        if (g.copy().parent.copy().parent().copy().diff(g.copy().parent).val + g.val + h.val + f.val > 0) {
+            readln(s);
+            g.val = g.val + f.val + f.parent.val;
+            s = g.copy().parent.toString() + f.toString() + g.toString();
+            s = s + s + j.toString() + "cbparser";
+        } else {
+            s = "Nothing\n";
+        }
+        return;
+    }
+}
+
+class Clone {
+    Int val;
+    Clone parent;
+
+    Clone copy() {
+        Clone c;
+        c = new Clone();
+        c.val = this.val;
+        c.parent = this;
+        return c;
+    }
+
+    Clone diff(Clone c) {
+
+        // b is just a negation of a
+        Bool a;
+        Bool b;
+        Clone res;
+        Int x;
+
+        a = this.val > c.val;
+        b = c.val + c.val + c.val + this.val - 2 * c.val - 1 * this.val >= this.val + 0 || !a || false && 2 > 1;
+
+        res = new Clone();
+        res.val = this.val - a.val;
+        res.parent = c;
+
+        x = 2;
+        while (x > 0 && a) {
+            x = x - 1;
+            res = res.copy();
+        }
+        while (x > 0 && b) {
+            res = res.copy();
+            x = x + x + x + x / x - 1 - x * 2;
+        }
+        res.copy();
+        return res.parent;
+    }
+
+    Bool getTrue(Bool x) {
+        return x || true;
+    }
+
+    String toString() {
+        return "c ";
+    }
+
+}
+
+// STRINGS
+class Main {
+
+Void main() {
+
+   while(true){
+
+      b = 340 ;
+
+      t1 = "t2" ;
+      t3 = "t2" + t1 + "";
+      tw723b23 = "`1ijwi38mp?><,.{}[]~ 1234567890 */ // /* \" \\ \n \r \\ \t \b \x2b \035";
+   }
+}
+
+}
+
+/* Mainly test multiple class (defined later but referenced f//irst),
+   Variable shadowing in Dummy class,//
+   chain/*ed field access expressions,
+   e.g. this.getCompute().square(-3);
+   Test combination of "if .. else .." "return" and "while"
+
+ */
+
+
+class Dummy {
+   Dummy j;
+    // this is a single line // comment with /* a nested //comment */
+   Bool dummy() {
+       // this singl/*e line*/ comment /* overlaps with a multi line */
+      Int i;
+          // comment
+      Bool j;
+      /* this multi line comment stops halfway // but single line comme/*nt ends */
+      Int k;
+      return i != k ---0;
+   }
+
+}

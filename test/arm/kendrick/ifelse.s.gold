@@ -1,0 +1,48 @@
+.data
+IntegerFormat:
+.asciz "%i"
+L1:
+.asciz "a is 1!"
+L2:
+.asciz "a is not 1!"
+
+.text
+.global main
+.type main, %function
+
+main:
+stmfd sp!,{fp,lr,v1,v2,v3,v4,v5}
+add fp,sp,#24
+sub sp,fp,#36
+
+main_0:
+ldr a1,[fp,#-28]
+mov a2,#1
+cmp a1,a2
+moveq a1,#1
+movne a1,#0
+str a1,[fp,#-32]
+ldr a1,[fp,#-32]
+cmp a1,#0
+beq Label3
+
+main_1:
+ldr a1,=L2
+bl printf(PLT)
+
+main_2:
+b Label5
+
+main_3:
+Label3:
+
+main_4:
+ldr a1,=L1
+bl printf(PLT)
+
+main_5:
+Label5:
+
+mainexit:
+sub sp,fp,#24
+ldmfd sp!,{fp,pc,v1,v2,v3,v4,v5}

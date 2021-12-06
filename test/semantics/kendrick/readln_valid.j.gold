@@ -1,0 +1,15 @@
+======= CData3 =======
+
+class Main {
+}
+
+======= CMtd3 =======
+
+Void %Main_main (Main this) {
+	Int i;
+	Bool b;
+	String s;
+	readln i;
+	readln b;
+	readln s;
+}

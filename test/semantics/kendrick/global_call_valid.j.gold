@@ -1,0 +1,37 @@
+======= CData3 =======
+
+class Main {
+}
+class Global {
+	Global globe;
+}
+
+======= CMtd3 =======
+
+Void %Main_main (Main this) {
+	return;
+}
+Global %Global_getglobal (Global this) {
+	Global another;
+	another = globe;
+	another.globe = globe
+	_t1 = this.globe;
+	_t1.globe = another
+	_t2 = another.globe;
+	this.globe = _t2
+	_t3 = %Global_getglobal();
+	this.globe = _t3
+	return globe;
+}
+Void %Global_getvoid (Global this) {
+	_t4 = %Global_getglobal(this);
+	_t5 = %Global_getvoid(globe);
+	_t6 = %Global_getglobal(globe);
+	_t9 = this.globe;
+	_t8 = _t9.globe;
+	_t7 = %Global_getvoid(_t8);
+	_t12 = this.globe;
+	_t11 = _t12.globe;
+	_t10 = %Global_getglobal(_t11);
+	return;
+}

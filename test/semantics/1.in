@@ -1,0 +1,14 @@
+class MainC {
+    Void main () {
+        return;
+    }
+}
+
+class Person {
+    String name;
+    Person spouse;
+
+    String writeLetter() {
+        return "Hi, " + spouse.name + "From: " + name;
+    }
+}

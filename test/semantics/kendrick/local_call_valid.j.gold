@@ -1,0 +1,32 @@
+======= CData3 =======
+
+class Main {
+}
+class Local {
+}
+
+======= CMtd3 =======
+
+Void %Main_main (Main this) {
+	Local local;
+	_t1 = %Main_all(local);
+}
+Int %Local_a (Local this) {
+	return 1;
+}
+String %Local_b (Local this) {
+	return "hello";
+}
+Bool %Local_c (Local this) {
+	return True;
+}
+Local %Local_d (Local this) {
+	return this;
+}
+Void %Local_all (Local this) {
+	_t2 = %Local_a();
+	_t3 = %Local_b();
+	_t4 = %Local_c();
+	_t5 = %Local_d();
+	return;
+}

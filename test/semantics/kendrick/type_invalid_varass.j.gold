@@ -1,0 +1,2 @@
+Error during static checking!
+TypeCheckError: mismatch in lhs Int and rhs String in 'AssignmentStatement'

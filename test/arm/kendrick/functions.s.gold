@@ -1,0 +1,55 @@
+.data
+IntegerFormat:
+.asciz "%i"
+L1:
+.asciz "Good riddance 4212!"
+
+.text
+.global main
+.type main, %function
+
+main:
+stmfd sp!,{fp,lr,v1,v2,v3,v4,v5}
+add fp,sp,#24
+sub sp,fp,#44
+str a1,[fp,#-28]
+mov a1,#0
+bl malloc(PLT)
+str a1,[fp,#-36]
+ldr a1,[fp,#-36]
+ldr a2,=#4212
+ldr a3,=L1
+bl _Person_greet
+str a1,[fp,#-40]
+ldr a1,[fp,#-40]
+str a1,[fp,#-32]
+ldr a1,=IntegerFormat
+ldr a2,[fp,#-32]
+bl printf(PLT)
+b mainexit
+
+_Person_greet:
+stmfd sp!,{fp,lr,v1,v2,v3,v4,v5}
+add fp,sp,#24
+sub sp,fp,#44
+str a1,[fp,#-28]
+str a2,[fp,#-32]
+str a3,[fp,#-36]
+ldr a1,=IntegerFormat
+ldr a2,[fp,#-32]
+bl printf(PLT)
+ldr a1,[fp,#-36]
+bl printf(PLT)
+ldr a1,=#4212
+str a1,[fp,#-40]
+ldr a1,[fp,#-40]
+b _Person_greetexit
+b _Person_greetexit
+
+_Person_greetexit:
+sub sp,fp,#24
+ldmfd sp!,{fp,pc,v1,v2,v3,v4,v5}
+
+mainexit:
+sub sp,fp,#24
+ldmfd sp!,{fp,pc,v1,v2,v3,v4,v5}

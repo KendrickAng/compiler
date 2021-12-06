@@ -1,0 +1,17 @@
+class Main {
+
+    Void main(){
+        Print print;
+        Int i;
+
+        print = (new Print()).copy();
+        i = 10;
+    }
+}
+
+class Print {
+
+    Print copy() {
+        return this;
+    }
+}

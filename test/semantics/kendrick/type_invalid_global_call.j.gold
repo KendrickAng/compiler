@@ -1,0 +1,2 @@
+Error during static checking!
+TypeCheckError: GlobalCall: expected 0 args, got 1

@@ -1,0 +1,90 @@
+======= CData3 =======
+
+class Testaexp {
+}
+class Testbexp {
+	Bool a;
+	Bool b;
+}
+class Testsexp {
+	String id;
+}
+
+======= CMtd3 =======
+
+Void %Testaexp_main (Testaexp this) {
+	Int t;
+	_t1 = -2;
+	_t2 = 1 + _t1;
+	t = _t2;
+	_t3 = -2;
+	_t4 = 1 - _t3;
+	t = _t4;
+	_t5 = -2;
+	_t6 = -4;
+	_t7 = _t6 / 5;
+	_t8 = 3 * _t7;
+	_t9 = _t5 - _t8;
+	_t10 = 1 + _t9;
+	t = _t10;
+	_t11 = t / t;
+	_t12 = 1 * 2;
+	_t13 = t - _t12;
+	_t14 = _t11 + _t13;
+	_t15 = t + _t14;
+	_t16 = t + _t15;
+	t = _t16;
+}
+Void %Testbexp_main (Testbexp this) {
+	Bool c;
+	Bool d;
+	Bool t;
+	t = True;
+	t = False;
+	_t17 = True || False;
+	t = _t17;
+	_t18 = True && False;
+	t = _t18;
+	_t19 = !a;
+	_t20 = !b;
+	_t21 = _t19 && _t20;
+	_t22 = !c;
+	_t23 = !d;
+	_t24 = _t22 && _t23;
+	_t25 = _t21 || _t24;
+	t = _t25;
+	_t26 = 1 > 2;
+	t = _t26;
+	_t27 = 1 < 2;
+	t = _t27;
+	_t28 = 1 >= 2;
+	t = _t28;
+	_t29 = 1 != 2;
+	t = _t29;
+	_t30 = 1 != 2;
+	t = _t30;
+	_t31 = 1 == 2;
+	t = _t31;
+}
+Void %Testsexp_main (Testsexp this) {
+	String t;
+	t = "hi";
+	_t32 = "hi" + "world";
+	t = _t32;
+	_t33 = t + "hi";
+	t = _t33;
+	_t34 = this.id;
+	_t35 = _t34 + "hi";
+	t = _t35;
+	_t36 = this.id;
+	_t37 = _t36 + "hi";
+	t = _t37;
+	_t38 = NULL + "hi";
+	t = _t38;
+	_t39 = NULL + "hi";
+	t = _t39;
+	_t40 = "why can't we use " + " parser generators ? ";
+	_t41 = "this assignment " + _t40;
+	_t42 = "I hate " + _t41;
+	t = _t42;
+}

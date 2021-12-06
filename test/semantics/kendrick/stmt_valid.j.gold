@@ -1,0 +1,53 @@
+======= CData3 =======
+
+class Main {
+}
+class Statement {
+	Statement s;
+}
+
+======= CMtd3 =======
+
+Void %Main_main (Main this) {
+	String s;
+	Statement statement;
+	Int x;
+	x = 2;
+	_t1 = new Statement();
+	statement = _t1;
+	_t2 = new Statement();
+	statement.s = _t2
+	_t3 = x == 0;
+	if (_t3) goto 1;
+	_t4 = "this is a hard" + "module and why am I spending so much time on this";
+	s = _t4;
+	goto 2;
+	Label 1:
+	x = 2;
+	Label 2:
+	Label 3:
+	_t5 = x > 0;
+	_t6 = _t5 && False;
+	_t7 = !True;
+	_t8 = !_t7;
+	_t9 = !_t8;
+	_t10 = !_t9;
+	_t11 = _t6 || _t10;
+	if (_t11) goto 5;
+	goto 4;
+	Label 5:
+	_t12 = %Main_skip(statement, statement);
+	goto 3;
+	Label 4:
+	return;
+}
+Statement %Statement_copy (Statement this) {
+	Statement c;
+	_t13 = %Statement_skip(c);
+	_t14 = new Statement();
+	s = _t14;
+	return s;
+}
+Void %Statement_skip (Statement this, Statement c) {
+	return;
+}

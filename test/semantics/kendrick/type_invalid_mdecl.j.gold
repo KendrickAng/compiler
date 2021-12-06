@@ -1,0 +1,2 @@
+Error during static checking!
+TypeCheckError: return type String does not match method return type Int

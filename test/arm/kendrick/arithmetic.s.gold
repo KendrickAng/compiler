@@ -1,0 +1,57 @@
+.data
+IntegerFormat:
+.asciz "%i"
+
+.text
+.global main
+.type main, %function
+
+main:
+stmfd sp!,{fp,lr,v1,v2,v3,v4,v5}
+add fp,sp,#24
+sub sp,fp,#68
+str a1,[fp,#-28]
+mov a2,#1
+mov a3,#1
+add a1,a2,a3
+str a1,[fp,#-44]
+ldr a2,[fp,#-44]
+mov a3,#1
+add a1,a2,a3
+str a1,[fp,#-48]
+ldr a1,[fp,#-48]
+str a1,[fp,#-32]
+mov a2,#2
+mov a3,#2
+mul a1,a2,a3
+str a1,[fp,#-52]
+ldr a2,[fp,#-52]
+mov a3,#2
+mul a1,a2,a3
+str a1,[fp,#-56]
+ldr a1,[fp,#-56]
+str a1,[fp,#-36]
+mov a2,#3
+mov a3,#3
+sub a1,a2,a3
+str a1,[fp,#-60]
+ldr a2,[fp,#-60]
+mov a3,#3
+sub a1,a2,a3
+str a1,[fp,#-64]
+ldr a1,[fp,#-64]
+str a1,[fp,#-40]
+ldr a1,=IntegerFormat
+ldr a2,[fp,#-32]
+bl printf(PLT)
+ldr a1,=IntegerFormat
+ldr a2,[fp,#-36]
+bl printf(PLT)
+ldr a1,=IntegerFormat
+ldr a2,[fp,#-40]
+bl printf(PLT)
+b mainexit
+
+mainexit:
+sub sp,fp,#24
+ldmfd sp!,{fp,pc,v1,v2,v3,v4,v5}
